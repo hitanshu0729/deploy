@@ -66,7 +66,7 @@ const SieveOfEratosthenes = () => {
         placeholder="Enter number"
         type="number"
         value={number || ""}
-        className="border w-[350px] min-w-[40vw] border-black p-2 text-black"
+        className="border w-[350px] max-w-[40vw] border-black p-2 text-black"
         onChange={handleChange}
         disabled={isRunning}
       />
