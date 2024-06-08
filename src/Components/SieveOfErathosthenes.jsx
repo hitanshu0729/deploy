@@ -15,7 +15,7 @@ const SieveOfEratosthenes = () => {
     if (e.target.value <= 0 || e.target.value > 1000)
       alert("Number must be in range 1-1000");
     else setNumber(parseInt(e.target.value) || 0);
-    if (e.target.value == 0) alert("Enter number in range 1-1000");
+    // if (e.target.value == 0) alert("Enter number in range 1-1000");
   };
 
   const startSieve = useCallback(async () => {
