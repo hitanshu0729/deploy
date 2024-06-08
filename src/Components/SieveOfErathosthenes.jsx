@@ -60,7 +60,7 @@ const SieveOfEratosthenes = () => {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center h-full bg-[#313552] text-white py-8 w-full">
+    <div className="flex flex-col items-center justify-center h-full bg-[#313552] text-white py-8 w-full max-w-[94vw]">
       <h1 className="text-4xl mb-6 mt-6">Sieve of Eratosthenes</h1>
       <input
         placeholder="Enter number"
@@ -87,7 +87,7 @@ const SieveOfEratosthenes = () => {
         </button>
       </div>
       {isRunning && ele && (
-        <div className="text-white text-3xl mt-4">
+        <div className="text-white text-3xl mt-4 text-center">
           Checking for elements divisible by {ele}
         </div>
       )}
