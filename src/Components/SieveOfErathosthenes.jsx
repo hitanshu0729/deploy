@@ -12,12 +12,15 @@ const SieveOfEratosthenes = () => {
   }, [isRunning]);
 
   const handleChange = (e) => {
-    setNumber(parseInt(e.target.value) || 0);
+    if (e.target.value <= 0 || e.target.value > 1000)
+      alert("Number must be in range 1-1000");
+    else setNumber(parseInt(e.target.value) || 0);
+    if (e.target.value == 0) alert("Enter number in range 1-1000");
   };
 
   const startSieve = useCallback(async () => {
     if (number < 0 || number > 500) {
-      alert("Number should be in range 1 to 500");
+      alert("Number should be in range 1 to 1000");
     }
     setIsRunning(true);
     setSieve(Array(number).fill("red"));
@@ -34,7 +37,7 @@ const SieveOfEratosthenes = () => {
           if (!isRunningRef.current) return;
           sieveArray[j] = "green";
           setSieve([...sieveArray]);
-          console.log(speed);
+          // console.log(speed);
           await new Promise((resolve) => setTimeout(resolve, speed)); // 1-second delay
         }
 
@@ -60,14 +63,15 @@ const SieveOfEratosthenes = () => {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center h-full bg-[#313552] text-white py-8">
+    <div className="flex flex-col items-center justify-center h-full bg-[#313552] text-white py-8 w-full">
       <h1 className="text-4xl mb-6 mt-6">Sieve of Eratosthenes</h1>
       <input
         placeholder="Enter number"
         type="number"
         value={number || ""}
-        className="border w-[20vw] border-black p-2 text-black"
+        className="border w-[350px] min-w-[40vw] border-black p-2 text-black"
         onChange={handleChange}
+        disabled={isRunning}
       />
       <div className="mt-4 flex gap-4">
         <button
