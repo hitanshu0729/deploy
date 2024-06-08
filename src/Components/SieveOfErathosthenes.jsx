@@ -61,7 +61,7 @@ const SieveOfEratosthenes = () => {
 
   return (
     <div className="flex flex-col items-center justify-center h-full bg-[#313552] text-white py-8 w-full max-w-[94vw]">
-      <h1 className="text-4xl mb-6 mt-6">Sieve of Eratosthenes</h1>
+      <h1 className="text-4xl mb-6 mt-6 text-center">Sieve of Eratosthenes</h1>
       <input
         placeholder="Enter number"
         type="number"
