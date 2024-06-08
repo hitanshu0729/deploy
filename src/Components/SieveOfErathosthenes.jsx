@@ -6,7 +6,7 @@ const SieveOfEratosthenes = () => {
   const [isRunning, setIsRunning] = useState(false);
   const [ele, setEle] = useState(0);
   const isRunningRef = useRef(isRunning);
-  const speed = 5~00;
+  const speed = 500;
   useEffect(() => {
     isRunningRef.current = isRunning;
   }, [isRunning]);
