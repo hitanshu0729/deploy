@@ -19,9 +19,6 @@ const SieveOfEratosthenes = () => {
   };
 
   const startSieve = useCallback(async () => {
-    if (number < 0 || number > 500) {
-      alert("Number should be in range 1 to 1000");
-    }
     setIsRunning(true);
     setSieve(Array(number).fill("red"));
     const sieveArray = Array(number).fill("red");
